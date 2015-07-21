@@ -1,5 +1,6 @@
 package com.example.sergei.androidapp00;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -67,6 +68,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onOptionsItemSelected(MenuItem item) {
 
         Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
+        switch (item.getItemId()) {
+            case R.id.dynamic_layout:{
+                startActivity(new Intent(this, ProgramLayoutActivity.class));
+                break;
+            }
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
